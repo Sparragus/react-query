@@ -19,7 +19,7 @@ export default class Query extends Component {
     }));
 
     try {
-      const data = await this.props.getData();
+      const data = await this.props.query();
       this.setState(state => ({
         loading: false,
         data

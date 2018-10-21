@@ -2,12 +2,12 @@ import React from "react";
 
 import Query from "./Query";
 
-export default function withQuery({ name = "query", getData }) {
+export default function withQuery(query, options = { name: "query" }) {
   return WrappedComponent => props => (
-    <Query getData={() => getData(props)}>
+    <Query query={() => query(props)}>
       {queryState => {
         const queryProps = {
-          [name]: queryState
+          [options.name]: queryState
         };
 
         return <WrappedComponent {...props} {...queryProps} />;
