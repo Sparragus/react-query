@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "dev": "nodemon -i build --exec npm run build"
+    "dev": "nodemon -i build --exec npm run build",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react"
