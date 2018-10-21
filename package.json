@@ -5,9 +5,12 @@
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "nodemon -i build --exec npm run build"
   },
-  "keywords": ["react"],
+  "keywords": [
+    "react"
+  ],
   "author": "Richard B. Kaufman López",
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +18,7 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "nodemon": "^1.18.4",
     "react": "^16.5.2",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
